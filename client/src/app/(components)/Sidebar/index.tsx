@@ -63,13 +63,13 @@ const Sidebar = () => {
                     }`}
             >
                 <Image
-                    src="https://s3-inventorydatadashboard.s3.amazonaws.com/logo.png"
+                    src="/logo.svg"
                     alt="logo"
                     width={25}
                     height={25}
                     className="rounded-full h-full object-cover" />
                 <h1 className={`${isSidebarCollapsed ? "hidden" : "block"
-                    } font-extrabold text-2xl`}>FLStock</h1>
+                    } font-extrabold text-2xl`}>Invify</h1>
 
                 <button className='md:hidden px-3 py-3 bg-gray-100 rounded-full hover:bg-blue-100' onClick={toggleSidebar} >
                     <Menu className='w-4 h-4' />
@@ -116,10 +116,6 @@ const Sidebar = () => {
                     label="Expenses"
                     isCollapsed={isSidebarCollapsed}
                 />
-            </div>
-            {/* footer */}
-            <div className={`${isSidebarCollapsed ? "hidden" : "block"}mb-10`}>
-                <p className='text-center text-xs text-gray-500'> &copy; {new Date().getFullYear().toString()} Freda Luo</p>
             </div>
         </div >
     )

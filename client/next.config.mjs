@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     images: {
+        domains: ["ui-avatars.com", "api.dicebear.com"],
         remotePatterns: [
             {
                 protocol: "https",
@@ -11,6 +12,6 @@ const nextConfig = {
             }
         ]
     }
-};
+}
 
 export default nextConfig;

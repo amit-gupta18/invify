@@ -2,16 +2,8 @@ import type { Config } from "tailwindcss";
 import { createThemes } from "tw-colors";
 import colors from "tailwindcss/colors";
 
-const baseColors = [
-  "gray",
-  "red",
-  "yellow",
-  "green",
-  "blue",
-  "indigo",
-  "purple",
-  "pink",
-];
+// 🎯 Override base design to focus on greens
+const baseColors = ["gray", "green", "emerald", "lime", "yellow"];
 
 const shadeMapping = {
   "50": "900",
@@ -35,6 +27,13 @@ const generateThemeObject = (colors: any, mapping: any, invert = false) => {
       theme[color][key] = colors[color][shadeKey];
     });
   });
+
+  // 👇 Inject semantic aliases here
+  theme["primary"] = colors.emerald;
+  theme["secondary"] = colors.lime;
+  theme["accent"] = colors.green;
+  theme["muted"] = colors.gray;
+
   return theme;
 };
 
@@ -45,6 +44,7 @@ const themes = {
   light: {
     ...lightTheme,
     white: "#ffffff",
+    black: "#000000",
   },
   dark: {
     ...darkTheme,
